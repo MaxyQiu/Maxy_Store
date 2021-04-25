@@ -13,3 +13,15 @@
 ### SHOP PAGE
 <img width="1240" alt="Screen Shot 2021-04-24 at 9 42 59 PM" src="https://user-images.githubusercontent.com/43826068/115977447-5bb7d480-a546-11eb-98d6-e508da4e5173.png">
 
+## After you fork and clone:
+Install dependencies
+In your terminal after you clone your project down, remember to run either yarn or npm install to build all the dependencies in the project.
+
+## Set your firebase config
+Remember to replace the config variable in your firebase.utils.js with your own config object from the firebase dashboard! Navigate to the project settings and scroll down to the config code. Copy the object in the code and replace the variable in your cloned code.
+
+
+## Set your stripe publishable key
+Set the publishableKey variable in the stripe-button.component.jsx with your own publishable key from the stripe dashboard.
+
+
