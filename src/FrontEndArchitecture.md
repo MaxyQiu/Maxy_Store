@@ -1,17 +1,13 @@
 
 
-# Organisation & Design
-
-After fiddling with things for a Really Long Amount Of Time, I've
-finally settled on what I consider to be a good way of structuring Siren
-objects. Incidentally this is very similar to the approach Newspeak (but
-also ML modules) takes **because** Newspeak has no global namespace, and
-this was one of the few things I didn't shamelessly steal from them
-ahaha.
+# Intro & The big picture
+## Intro 
+For the developers who never use React to build any apps or but want to learn about it with a practical insight, this doc might be a good help for you. There is not only a introduction for the app but also some detailed technical scripts in the Components section.
+##The big picture
 
 
-## Designing objects
 
+# Components Intro
 An Object in Siren is a self-contained module. It must define all of its
 dependencies, and all of its behaviours. Since objects are such
 monolithic things, we can divide it up in simpler concepts, however. So,
@@ -46,21 +42,9 @@ Given this, we can categorise objects in two groups:
   for purposes outside of refinement is considered an error.
 
 
-## Approach to design
+## Fork & Configuration
 
-Given that we strive to provide a system where writing correct programs
-is the natural thing to do (i.e.: Correctness By Design), it makes sense
-to design the messages in an object such that independent of which
-message we send, we **always** end up in a *valid* state of the
-program. And this requires constraining access to incomplete objects.
 
-As an example, the `Browser` object requires three different pieces of
-configuration: `object`, `context`, and `display`. It so happens that
-for all of these three there's a good default that can be used and
-relieve people from providing too much information when trying to
-interact with it. A Browser starts in the global object, within the
-global context, and using a `Browser-Default-Display` for formatting
-things.
 
 From there, people can refine the browser, either by cloning the object
 and modifying its configuration behaviours directly, or by sending the
